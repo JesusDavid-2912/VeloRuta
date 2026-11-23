@@ -11,6 +11,8 @@ const db = require('../db');
  *     responses:
  *       200:
  *         description: Lista de paquetes obtenida.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.get('/', async (req, res) => {
     try {
@@ -46,6 +48,8 @@ router.get('/', async (req, res) => {
  *     responses:
  *       201:
  *         description: Paquete creado.
+ *       500:
+ *         description: Error interno del servidor.
  * 
  */
 router.post('/', async (req, res) => {
@@ -90,6 +94,8 @@ router.post('/', async (req, res) => {
  *     responses:
  *       200:
  *         description: Paquete actualizado.
+ *       500:
+ *         description: Error interno del servidor.
  *
  */
 router.put('/:id', async (req, res) => {
@@ -119,6 +125,8 @@ router.put('/:id', async (req, res) => {
  *     responses:
  *       200:
  *         description: Paquete eliminado.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.delete('/:id', async (req, res) => {
     try {

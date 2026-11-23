@@ -11,6 +11,8 @@ const db = require('../db');
  *     responses:
  *       200:
  *         description: Lista de almacenes obtenida.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.get('/', async (req, res) => {
     try {
@@ -46,6 +48,8 @@ router.get('/', async (req, res) => {
  *     responses:
  *       201:
  *         description: Almacen registrado.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.post('/', async (req, res) => {
     try {
@@ -89,6 +93,8 @@ router.post('/', async (req, res) => {
  *     responses:
  *       200:
  *         description: Almacen actualizado.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.put('/:id', async (req, res) => {
     try {
@@ -117,6 +123,8 @@ router.put('/:id', async (req, res) => {
  *     responses:
  *       200:
  *         description: Almacen eliminado.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.delete('/:id', async (req, res) => {
     try {

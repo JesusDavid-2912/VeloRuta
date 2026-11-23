@@ -11,6 +11,8 @@ const db = require('../db');
  *     responses:
  *       200:
  *         description: Lista de entregas obtenida.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.get('/', async (req, res) => {
     try {
@@ -52,6 +54,8 @@ router.get('/', async (req, res) => {
  *     responses:
  *       201:
  *         description: Entrega creada.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.post('/', async (req, res) => {
     try {
@@ -101,6 +105,8 @@ router.post('/', async (req, res) => {
  *     responses:
  *       200:
  *         description: Entrega actualizada.
+ *       500:
+ *         description: Error interno del servidor.
  *
  */
 router.put('/:id', async (req, res) => {
@@ -130,6 +136,8 @@ router.put('/:id', async (req, res) => {
  *     responses:
  *       200:
  *         description: Entrega eliminada.
+ *       500:
+ *         description: Error interno del servidor.
  */
 router.delete('/:id', async (req, res) => {
     try {
